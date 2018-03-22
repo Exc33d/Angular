@@ -1,4 +1,5 @@
 var c33dApp = angular.module('c33dApp', ['ui.bootstrap', 'ngRoute', 'c33dControllers']);
+
 c33dApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
 		when('/about', {
@@ -17,6 +18,7 @@ c33dApp.config(['$routeProvider', function($routeProvider) {
 			redirectTo: '/home'
 		});
 }]);
+
 var c33dControllers = angular.module('c33dControllers', []);
 c33dApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, $modalStack) {
 	$scope.ok = function () {
