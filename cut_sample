@@ -1,0 +1,33 @@
+var c33dApp = angular.module('mixApp', ['ui.bootstrap', 'ngRoute', 'c33dControllers']);
+
+c33dApp.config(['$routeProvider', function($routeProvider) {
+	$routeProvider.
+		when('/about', {
+			templateUrl: 'modules/pages/html/about.html',
+			controller:  'emptyCtrl'
+		}).
+		when('/basket', {
+			templateUrl: 'modules/basket/html/index.html',
+			controller:  'mixBasketCtrl'
+		}).
+		when('/home', {
+			templateUrl: 'modules/home/html/index.html',
+			controller:  'mixHomeCtrl'
+		}).
+		otherwise({
+			redirectTo: '/home'
+		});
+}]);
+var c33dControllers = angular.module('sushiControllers', []);
+
+c33dApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, $modalStack) {
+	$scope.ok = function () {
+		$modalInstance.close();
+	};
+	$scope.cancel = function () {
+		$modalInstance.dismiss('cancel');
+	};
+	$scope.closeAll = function () {
+		$modalStack.dismissAll();
+	};
+});
