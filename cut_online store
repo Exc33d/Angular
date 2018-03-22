@@ -18,7 +18,7 @@ c33dApp.config(['$routeProvider', function($routeProvider) {
 			redirectTo: '/home'
 		});
 }]);
-var c33dControllers = angular.module('sushiControllers', []);
+var c33dControllers = angular.module('c33dControllers', []);
 
 c33dApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, $modalStack) {
 	$scope.ok = function () {
