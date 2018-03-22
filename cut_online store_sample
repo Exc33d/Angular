@@ -1,4 +1,4 @@
-var c33dApp = angular.module('mixApp', ['ui.bootstrap', 'ngRoute', 'c33dControllers']);
+var c33dApp = angular.module('c33dApp', ['ui.bootstrap', 'ngRoute', 'c33dControllers']);
 
 c33dApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.
@@ -8,11 +8,11 @@ c33dApp.config(['$routeProvider', function($routeProvider) {
 		}).
 		when('/basket', {
 			templateUrl: 'modules/basket/html/index.html',
-			controller:  'mixBasketCtrl'
+			controller:  'c33dBasketCtrl'
 		}).
 		when('/home', {
 			templateUrl: 'modules/home/html/index.html',
-			controller:  'mixHomeCtrl'
+			controller:  'c33dHomeCtrl'
 		}).
 		otherwise({
 			redirectTo: '/home'
